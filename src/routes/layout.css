@@ -1,2 +1,13 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    @apply bg-white dark:bg-[#333] text-black dark:text-white;
+}
