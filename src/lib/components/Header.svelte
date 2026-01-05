@@ -49,8 +49,8 @@
 
     onMount(() => {
 
-        function handleIntersection(entries) {
-            entries.map((entry) => {
+        function handleIntersection(entries: any) {
+            entries.map((entry: any) => {
                 if(entry.isIntersecting) {
                     document.querySelector(`#${entry.target.id}-link`)?.classList.add('dark:text-[#ccc]', 'text-[#555]', 'border-b-2', 'border-[#555]', 'dark:border-[#ccc]');
                 } else {
