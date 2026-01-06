@@ -1,4 +1,6 @@
 <script>
+	import Hero from "$lib/components/Hero.svelte";
+
     const showOnPx = 250;
     let showBtn = false;
 
@@ -9,9 +11,7 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div id="home" class="h-dvh pt-20">
-    <h1>Manuel Figueiredo</h1>
-</div>
+<Hero />
 <div id="about" class="h-dvh pt-20">
     <h1>About me</h1>
 </div>

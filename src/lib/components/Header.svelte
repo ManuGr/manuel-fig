@@ -10,7 +10,7 @@
     const links = [
         {id: 'home', label: 'Home'},
         {id: 'about', label: 'About me'},
-        {id: 'projects', label: 'Project'},
+        {id: 'projects', label: 'Projects'},
         {id: 'resume', label: 'Resume'},
         {id: 'contact', label: 'Contact me'}
     ];
@@ -75,7 +75,7 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<header class="fixed w-full flex justify-center">
+<header class="fixed w-full flex justify-center z-50">
     <div class="{altHeader ? 'w-2/3 rounded-full mt-4' : 'w-full'} flex items-center justify-between p-4 {darkMode ? 'bg-white/5' : 'bg-black/12'} backdrop-blur-xl transition-all duration-300 ease-in-out">
         <ul class="flex items-center gap-2">
             {#each links as link}
@@ -93,7 +93,11 @@
         <ul class="flex items-center gap-2">
             <li>
                 <button class="p-2 flex items-center justify-center rounded-full {darkMode ? 'bg-white/25' : 'bg-black/15'} text-xl hover:scale-110 transition-all duration-300 ease-in-out" on:click={handleSwitch}>
-                    <span class="icon-[material-symbols--{darkMode ? 'dark' : 'light'}-mode-outline-rounded]">toggle mode</span>
+                    {#if darkMode}
+                        <span class="icon-[material-symbols--dark-mode-outline-rounded]">toggle mode</span>
+                    {:else}
+                        <span class="icon-[material-symbols--light-mode-outline-rounded]">toggle mode</span>
+                    {/if}
                 </button>
             </li>
             {#each buttons as btn}
