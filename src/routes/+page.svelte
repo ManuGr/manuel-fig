@@ -1,5 +1,6 @@
 <script>
-	import Hero from "$lib/components/Hero.svelte";
+	import About from "$lib/components/About.svelte";
+    import Hero from "$lib/components/Hero.svelte";
 
     const showOnPx = 250;
     let showBtn = false;
@@ -12,9 +13,8 @@
 <svelte:window on:scroll={handleScroll} />
 
 <Hero />
-<div id="about" class="h-dvh pt-20">
-    <h1>About me</h1>
-</div>
+<div class="h-24"></div>
+<About />
 <div id="projects" class="h-dvh pt-20">
     <h1>Projects</h1>
 </div>
