@@ -35,8 +35,8 @@
 </script>
 
 <div id="about" class="w-full h-dvh flex flex-col items-center justify-center gap-20 lg:pt-24 overflow-hidden">
-    <div class="w-5/6 h-5/6 px-6 py-4 flex justify-around gap-40 rounded-lg opacity-0 -translate-y-full transition-all duration-1000 ease-in-out delay-200">
-        <div class="w-full h-full flex flex-col gap-6 pt-12">
+    <div class="w-2/3 h-5/6 px-6 py-4 flex justify-around gap-10 rounded-lg opacity-0 -translate-y-full transition-[opacity,translate] duration-1000 ease-in-out delay-200">
+        <div class="w-full h-full flex flex-col gap-6">
             <div class="flex flex-col gap-1">
                 <h1 class="text-xl md:text-4xl font-semibold">Manuel Figueiredo</h1>
                 <h2 class="md:text-xl font-medium">Software Engineer</h2>
@@ -67,7 +67,7 @@
                 end of the day, I like to wind down with a good book, whether it's fiction or non-fiction. 
             </p>
         </div>
-        <div class="hidden xl:block relative w-2/5 h-full group overflow-hidden">
+        <div class="hidden xl:block relative w-1/2 h-5/6 group overflow-hidden">
             <img
                 src={manuel}
                 alt="Manuel Figueiredo"

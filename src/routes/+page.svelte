@@ -1,6 +1,9 @@
 <script>
 	import About from "$lib/components/About.svelte";
+	import Contact from "$lib/components/Contact.svelte";
     import Hero from "$lib/components/Hero.svelte";
+	import Projects from "$lib/components/Projects.svelte";
+	import Resume from "$lib/components/Resume.svelte";
 
     const showOnPx = 250;
     let showBtn = false;
@@ -15,15 +18,12 @@
 <Hero />
 <div class="h-24"></div>
 <About />
-<div id="projects" class="h-dvh pt-20">
-    <h1>Projects</h1>
-</div>
-<div id="resume" class="h-dvh pt-20">
-    <h1>Resume</h1>
-</div>
-<div id="contact" class="h-dvh pt-20">
-    <h1>Contact me</h1>
-</div>
+<div class="h-24"></div>
+<Projects />
+<div class="h-24"></div>
+<Resume />
+<div class="h-24"></div>
+<Contact />
 
 <a
     href="#home"
