@@ -3,7 +3,6 @@
 	import Contact from "$lib/components/Contact.svelte";
     import Hero from "$lib/components/Hero.svelte";
 	import Projects from "$lib/components/Projects.svelte";
-	import Resume from "$lib/components/Resume.svelte";
 
     const showOnPx = 250;
     let showBtn = false;
@@ -20,8 +19,6 @@
 <About />
 <div class="h-24"></div>
 <Projects />
-<div class="h-24"></div>
-<Resume />
 <div class="h-24"></div>
 <Contact />
 

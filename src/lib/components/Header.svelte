@@ -12,7 +12,6 @@
         {id: 'home', label: 'Home'},
         {id: 'about', label: 'About me'},
         {id: 'projects', label: 'Projects'},
-        {id: 'resume', label: 'Resume'},
         {id: 'contact', label: 'Contact me'}
     ];
 
