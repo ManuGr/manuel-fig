@@ -35,7 +35,7 @@
 </script>
 
 <div id="about" class="w-full h-dvh flex flex-col items-center justify-center gap-20 lg:pt-24 overflow-hidden">
-    <div class="w-2/3 h-5/6 px-6 py-4 flex justify-around gap-10 rounded-lg opacity-0 -translate-y-full transition-[opacity,translate] duration-1000 ease-in-out delay-200">
+    <div class="w-2/3 h-5/6 px-6 py-4 flex justify-around gap-10 rounded-lg opacity-0 -translate-y-full transition-[opacity,translate] duration-1000 ease-in-out delay-100">
         <div class="w-full h-full flex flex-col gap-6">
             <div class="flex flex-col gap-1">
                 <h1 class="text-xl md:text-4xl font-semibold">Manuel Figueiredo</h1>
@@ -61,8 +61,8 @@
                     on:mouseleave={ () => hover = false }
                     class="xl:underline xl:cursor-pointer"
                     role="none"
-                >two adorable cats (August and Ivy)</span>
-                . Outside of that, I love delving into the stories and worlds brought about by video games, especially turn-based RPGs.
+                >two adorable cats (August and Ivy)</span>.
+                Outside of that, I love delving into the stories and worlds brought about by video games, especially turn-based RPGs.
                 My wife and I also love collecting physical media, CDs tend to be my domain while my wife likes to focus on her collection of vynils. And at the
                 end of the day, I like to wind down with a good book, whether it's fiction or non-fiction. 
             </p>

@@ -2,8 +2,9 @@
     import { browser } from "$app/environment";
 	import { onMount } from "svelte";
     
-    let darkMode = true;
-    let altHeader = false;
+    let darkMode = $state(true);
+    let y = $state(0);
+    let altHeader = $derived(y > 20);
     
     const changePx = 100;
     
@@ -19,10 +20,6 @@
         {url: 'https://github.com/ManuGr', icon: 'icon-[line-md--github]', label: 'github link'},
         {url: 'https://www.linkedin.com/in/manuel-grgic/', icon:'icon-[mdi--linkedin]', label: 'linkedin link'}
     ];
-
-    function handleScroll() {
-        altHeader = document.documentElement.scrollTop > changePx;
-    }
 
     function handleSwitch() {
         console.log(altHeader);
@@ -73,7 +70,7 @@
     });
 </script>
 
-<svelte:window on:scroll={handleScroll} />
+<svelte:window bind:scrollY={y} />
 
 <header class="fixed w-full flex justify-center z-50">
     <div class="{altHeader ? 'w-2/3 rounded-full mt-4' : 'w-full'} flex items-center justify-between p-4 {darkMode ? 'bg-white/5' : 'bg-black/12'} backdrop-blur-xl transition-all duration-300 ease-in-out">
@@ -102,7 +99,7 @@
             </li>
             {#each buttons as btn}
                 <li>
-                    <a href={btn.url} class="p-2 flex items-center justify-center rounded-full {darkMode ? 'bg-white/25' : 'bg-black/15'} text-xl hover:scale-110 transition-all duration-300 ease-in-out">
+                    <a href={btn.url} target="_blank" class="p-2 flex items-center justify-center rounded-full {darkMode ? 'bg-white/25' : 'bg-black/15'} text-xl hover:scale-110 transition-all duration-300 ease-in-out">
                         <span class={btn.icon}>{btn.label}</span>
                     </a>
                 </li>
